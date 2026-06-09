@@ -1,0 +1,56 @@
+# Quality Control Rules
+
+Use this file when checking PDF extraction results.
+
+## Core Checks
+
+1. **Source check**
+   - Confirm the extraction used only the provided PDF unless user requested outside verification.
+   - Mark any unsupported claim as `needs_manual_check`.
+
+2. **Bibliographic check**
+   - Title, year, journal, and DOI must appear in the PDF.
+   - If DOI is missing, use `not_reported`.
+   - Do not reconstruct DOI from memory.
+
+3. **Controlled vocabulary check**
+   - `paper_type`, `review_section`, `data_type`, and `priority` must use allowed values.
+
+4. **Food relevance check**
+   - Do not label medical glycomics/glycoproteomics as `high` food relevance.
+   - Transferable methodology without food context is usually `medium`.
+
+5. **AI workflow check**
+   - `model_input` must be specific.
+   - `model_output` must be specific.
+   - If no AI model is used, use `not_applicable`.
+
+6. **Structure problem check**
+   - Specify the structure problem: composition, linkage, branching, molecular weight, conformation, fragment annotation, chemical shift prediction, candidate ranking, graph representation.
+
+7. **Limitation check**
+   - Must include at least one concrete limitation.
+   - Avoid vague limitations such as "more research is needed" unless the PDF only supports that.
+
+8. **Priority check**
+   - `A` requires clear relevance to the review's main thesis or a table/figure.
+   - Downgrade to `B` or `C` if relevance is indirect.
+   - Use `D` when the paper is off-scope.
+
+## Quality Control Output
+
+When the user asks for a quality check, output:
+
+| field | current_content | quality_status | problem | suggested_revision |
+|---|---|---|---|---|
+
+Use `ok`, `needs_manual_check`, or `revise`.
+
+## Common Problems
+
+- AI invents DOI or journal.
+- AI calls a glycoproteomics paper a food carbohydrate paper.
+- AI says "structure prediction" when the paper only does classification.
+- AI treats spectral fingerprint classification as full structural elucidation.
+- AI overstates transferability from defined glycans to heterogeneous food polysaccharides.
+- AI fails to distinguish intact polysaccharides from oligosaccharide fragments.
