@@ -24,6 +24,7 @@ AI should be framed as an assistant to traditional structural elucidation, not a
 - Algal polysaccharides.
 - Medicinal and food homologous polysaccharides when food relevance is clear.
 - Glycan structure AI methods if transferable to food carbohydrate structure elucidation.
+- Non-food glycan AI methods with high methodological value, only with explicit transferability caveats.
 
 ## Exclude Or Downgrade
 
@@ -55,3 +56,14 @@ Use for food carbohydrate case studies with meaningful structural characterizati
 
 `challenges_perspectives`:
 Use for papers discussing data standardization, lack of annotated datasets, raw spectral data availability, interpretability, multimodal learning, uncertainty, and experimental validation.
+
+## Context-Sensitive Inclusion
+
+Use `A*` for methodologically important but indirect papers:
+
+- Preprints.
+- Human/cell-line glycan representation models.
+- Medical glycomics models.
+- Glycoproteomics models with transferable MS/MS, NMR, representation, or multimodal methods.
+
+These papers can support method discussion, but not direct claims about food carbohydrate performance.

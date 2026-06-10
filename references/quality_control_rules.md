@@ -34,8 +34,14 @@ Use this file when checking PDF extraction results.
 
 8. **Priority check**
    - `A` requires clear relevance to the review's main thesis or a table/figure.
+   - `A*` requires high method value plus an explicit transferability caveat.
    - Downgrade to `B` or `C` if relevance is indirect.
    - Use `D` when the paper is off-scope.
+
+9. **Preprint/context check**
+   - If the paper is from bioRxiv, arXiv, ChemRxiv, or similar, preserve `publication_status = preprint`.
+   - Do not present preprints as peer-reviewed evidence.
+   - If the method is important but the domain is medical/cell-line glycomics, use `A*` rather than `A`.
 
 ## Quality Control Output
 

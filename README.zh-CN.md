@@ -19,6 +19,10 @@
 - 提取 AI 模型的输入和输出。
 - 判断文献是否适合放入 Table 1、Table 2、Table 3 或 Table 4。
 - 给文献分 A/B/C/D 优先级。
+- 对 preprint 或医学糖组学文献进行上下文判断。
+- 对低食品相关性但高方法价值的文献标记 `A*`。
+- 对多篇论文进行横向比较和方法演进总结。
+- 根据某一章节的矩阵行生成综述段落草稿。
 - 标记需要人工核查的信息。
 - 防止 AI 编造 DOI、模型名称、数据集或结论。
 
@@ -162,6 +166,10 @@ Use the food-carb-review-assistant skill to parse this PDF into my literature ma
 
 必须精读，可能进入正文、表格或图。
 
+`A*`：
+
+食品相关性较低或属于 preprint，但方法价值很高。可以用于方法学讨论，但必须写清楚迁移到食品碳水化合物还需要领域数据集、结构标注和实验验证。
+
 `B`：
 
 重要背景文献，可能引用。
@@ -173,6 +181,42 @@ Use the food-carb-review-assistant skill to parse this PDF into my literature ma
 `D`：
 
 不适合当前综述，建议剔除。
+
+## 多论文综合功能
+
+当你已经积累多篇矩阵行后，可以让 skill 做对比：
+
+```text
+请使用 food-carb-review-assistant skill，对这些文献矩阵行做多论文综合，比较它们的方法输入、输出、数据集、局限和对食品碳水化合物的可迁移性。
+```
+
+适合回答：
+
+- GlycoBERT 和 CandyCrunch 的区别是什么？
+- 几篇 NMR AI 论文的输入输出和局限有什么差异？
+- AI 辅助糖结构解析方法是如何演进的？
+- 哪些方法可以迁移到食品多糖，哪些还需要 domain adaptation？
+
+## 写作辅助功能
+
+当某一章的 A / A* / B 类文献整理好后，可以让 skill 帮你生成段落草稿：
+
+```text
+请使用 food-carb-review-assistant skill，根据这些 A-priority 文献矩阵行，起草 ai_msms_structure_elucidation 这一节的英文综述段落。
+```
+
+输出会包括：
+
+- section thesis
+- 段落草稿
+- citation placeholders，例如 `[P001]`
+- critical evaluation
+- transition sentence
+- 建议引用的表格或图
+
+注意：
+
+写作辅助只根据你提供的矩阵行生成草稿，不会替你判断最终观点。最终内容仍需要你人工核查和改写。
 
 ## 食品相关性判断
 

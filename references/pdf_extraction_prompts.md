@@ -13,6 +13,8 @@ Rules:
 - Use only allowed values for controlled fields.
 - Keep each cell concise enough for Excel.
 - Add evidence or uncertainty in `notes`.
+- For preprints, set `publication_status = preprint`.
+- For low-food-relevance but high-method-value papers, use `priority = A*` and add a transferability caveat.
 
 ## Deep Reading Note
 
@@ -69,6 +71,7 @@ Use this structure for A-priority papers.
    - Suitable review section
    - Suitable table or figure
    - Priority
+   - Transferability caveat if needed
    - One-sentence takeaway
 
 ## AI Input-Output Extraction

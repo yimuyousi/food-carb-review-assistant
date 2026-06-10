@@ -1,6 +1,6 @@
 ---
 name: food-carb-review-assistant
-description: Use for assisting a review on AI-assisted structural elucidation of food carbohydrates. Handles PDF-based literature extraction, literature matrix row creation, section classification, AI input-output analysis, table/figure material extraction, and quality control for reviews involving food carbohydrates, polysaccharides, glycans, MS/MS, NMR, spectroscopy, structure representation, graph learning, and AI-assisted carbohydrate structural elucidation.
+description: Use for assisting a review on AI-assisted structural elucidation of food carbohydrates. Handles PDF-based literature extraction, literature matrix row creation, section classification, AI input-output analysis, preprint and transferability assessment, multi-paper synthesis, section drafting, table/figure material extraction, and quality control for reviews involving food carbohydrates, polysaccharides, glycans, MS/MS, NMR, spectroscopy, structure representation, graph learning, and AI-assisted carbohydrate structural elucidation.
 ---
 
 # Food Carbohydrate Review Assistant
@@ -25,11 +25,16 @@ Core principle:
    - AI input-output workflow extraction.
    - Table material extraction.
    - Section classification.
+   - Preprint/context assessment.
+   - Multi-paper synthesis.
+   - Section writing assistance.
    - Quality control.
 2. Use the relevant reference file:
    - Matrix schema: `references/matrix_schema.md`
    - Review scope: `references/review_scope.md`
    - Extraction prompts: `references/pdf_extraction_prompts.md`
+   - Multi-paper synthesis: `references/multi_paper_synthesis.md`
+   - Writing assistance: `references/writing_assistant.md`
    - Quality control: `references/quality_control_rules.md`
 3. Output concise, copyable tables or structured notes.
 4. Mark uncertain or missing information as `not_reported` or `needs_manual_check`.
@@ -50,9 +55,16 @@ Use only these `review_section` values:
 ## Priority Rules
 
 - `A`: must read; likely included in main text, table, or figure.
+- `A*`: high method value but low or indirect food relevance; include only with explicit transferability and domain-adaptation caveats.
 - `B`: important background; likely cited.
 - `C`: supplementary reference.
 - `D`: exclude or not suitable.
+
+Use `A*` for papers such as medical glycomics, cell-line glycan modeling, preprints, or general glycan AI methods when:
+
+- The method is important for carbohydrate structure representation, MS/MS interpretation, NMR prediction, or glycan language/graph modeling.
+- Direct food carbohydrate relevance is low or medium.
+- Transfer to food carbohydrates requires domain adaptation, new datasets, or experimental validation.
 
 Assign `A` only when the paper is directly useful for at least one of:
 
@@ -61,6 +73,13 @@ Assign `A` only when the paper is directly useful for at least one of:
 - Glycan/carbohydrate structure representation or graph learning.
 - Food carbohydrate structural characterization with strong structural evidence.
 - Transferable method for food carbohydrate structural analysis.
+
+For preprints:
+
+- Mark `paper_type` as `preprint` if the PDF clearly indicates bioRxiv, arXiv, ChemRxiv, or similar.
+- Do not treat preprints as peer-reviewed evidence.
+- Use `A*` or `B` unless the user has a specific reason to elevate them.
+- Add the caveat in `notes`.
 
 ## Output Rules
 
@@ -111,6 +130,17 @@ For "quality check this extraction":
 - Use `references/quality_control_rules.md`.
 - Return fields needing manual checking.
 
+For "compare these papers" or "synthesize this section":
+
+- Use `references/multi_paper_synthesis.md`.
+- Produce a comparison table and a method-evolution logic, not only summaries.
+
+For "write this section from my matrix":
+
+- Use `references/writing_assistant.md`.
+- Produce a draft paragraph with citation placeholders, transition logic, and critical evaluation.
+- Do not invent references beyond the provided matrix rows.
+
 ## Review Logic
 
 Keep the review narrative aligned with:
@@ -124,4 +154,6 @@ Avoid turning the review into a generic "AI in food science" article.
 - Do not write a generic AI review.
 - Do not overstate that AI can fully solve intact natural polysaccharide structures.
 - Do not treat glycoproteomics papers as food carbohydrate papers unless transferability is clear.
+- Do not hide preprint status.
+- Do not upgrade low-food-relevance papers to `A` without a transferability caveat.
 - Do not replace manual expert judgment. Always mark uncertain fields for the user.

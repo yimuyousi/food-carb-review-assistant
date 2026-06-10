@@ -10,6 +10,7 @@ Use exactly these columns for `literature_matrix`.
 | `journal` | Journal or source | From PDF only |
 | `doi` | DOI | Use `not_reported` if absent |
 | `paper_type` | Type of paper | `review`, `original`, `method`, `database`, `tool` |
+| `publication_status` | Publication status | `peer_reviewed`, `preprint`, `database/tool_page`, `needs_manual_check` |
 | `review_section` | Best review section | Use controlled vocabulary |
 | `carbohydrate_type` | Main carbohydrate type | Examples: beta_glucan, pectin, glycan, oligosaccharide, general |
 | `food_relevance` | Food relevance level | `high`, `medium`, `low` |
@@ -22,6 +23,7 @@ Use exactly these columns for `literature_matrix`.
 | `main_contribution` | Main contribution | One concise phrase or sentence |
 | `limitation` | Key limitation | One concise phrase or sentence |
 | `relevance_to_review` | Why this paper matters | Connect to review title |
+| `transferability_caveat` | Caveat for non-food or low-relevance methods | Required for `A*` |
 | `use_position` | Where to use it | main_text, background, Table 1/2/3/4, Figure 1-6, discussion |
 | `priority` | A/B/C/D | Follow priority rules |
 | `notes` | Extra notes | Include uncertainty flags |
@@ -34,6 +36,13 @@ Use exactly these columns for `literature_matrix`.
 - `method`
 - `database`
 - `tool`
+- `preprint`
+
+`publication_status`:
+- `peer_reviewed`
+- `preprint`
+- `database/tool_page`
+- `needs_manual_check`
 
 `review_section`:
 - `structural_complexity`
@@ -56,10 +65,13 @@ Use exactly these columns for `literature_matrix`.
 - `not_applicable`
 
 `priority`:
+- `A*`
 - `A`
 - `B`
 - `C`
 - `D`
+
+Use `A*` for high-method-value papers with low or indirect food relevance. Always include `transferability_caveat`.
 
 ## Table Mapping
 
