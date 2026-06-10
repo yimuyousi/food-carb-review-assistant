@@ -14,6 +14,7 @@ It uses neutral project language such as "current research project", "research s
 - Draft section-level academic prose from supplied matrix rows.
 - Prepare table and figure materials.
 - Quality-check extraction results and mark unsupported claims.
+- Optionally use a local private project context for project-specific writing without publishing that context.
 
 ## Research Coverage
 
@@ -65,3 +66,5 @@ Use the polysaccharide-research-assistant skill to draft a section from these A-
 Missing information should be marked as `not_reported`. Unclear information should be marked as `needs_manual_check`.
 
 Use `A*` priority for papers with high methodological value but indirect relevance, such as preprints, medical glycomics papers, or general glycan AI methods that require domain adaptation before use in food or bioactive polysaccharide research.
+
+For project-specific writing, copy `references/project_context_template.md` to `.private/project_context.local.md` and fill it locally. The `.private/` folder is ignored by Git and should not be pushed to GitHub.

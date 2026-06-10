@@ -1,0 +1,5 @@
+# Local private research context. Do not publish these files.
+.private/
+*.local.md
+local_project_context.md
+

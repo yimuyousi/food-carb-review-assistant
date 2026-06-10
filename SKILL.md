@@ -30,6 +30,7 @@ Core principle:
 2. Use the relevant reference file:
    - Matrix schema: `references/matrix_schema.md`
    - Research scope: `references/research_scope.md`
+   - Private project context template: `references/project_context_template.md`
    - Extraction prompts: `references/pdf_extraction_prompts.md`
    - Multi-paper synthesis: `references/multi_paper_synthesis.md`
    - Writing assistance: `references/writing_assistant.md`
@@ -37,6 +38,20 @@ Core principle:
 3. Output concise, copyable tables or structured notes.
 4. Mark uncertain or missing information as `not_reported` or `needs_manual_check`.
 5. Distinguish food carbohydrates from general glycans, glycoproteomics, or medical glycomics.
+
+## Optional Private Project Context
+
+For public or shareable use, keep this skill generic.
+
+For project-specific work, use a local private context file:
+
+- Preferred path: `.private/project_context.local.md`
+- Template: `references/project_context_template.md`
+- Git rule: `.private/` and `*.local.md` must stay untracked and private.
+
+When the user asks to "use my private project context", "use my local project context", or provides `.private/project_context.local.md`, read that file and treat it as project-specific guidance for section titles, table plans, writing focus, and inclusion rules.
+
+The private context can override generic section names and table plans, but it must not override evidence rules. PDF facts, missing fields, uncertainty labels, and quality-control rules still take priority.
 
 ## Research Sections
 
