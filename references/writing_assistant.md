@@ -1,10 +1,10 @@
 # Writing Assistant
 
-Use this reference when the user asks to draft review sections or paragraphs from matrix rows, reading notes, or extracted evidence.
+Use this reference when the user asks to draft academic sections or paragraphs from matrix rows, reading notes, or extracted evidence.
 
 ## Purpose
 
-Turn structured extraction into review prose while preserving critical thinking.
+Turn structured extraction into academic synthesis prose while preserving critical thinking.
 
 Do not write generic summaries. The output should connect papers, identify trends, and highlight limitations.
 
@@ -42,7 +42,7 @@ For a section draft, output:
 
 ## Writing Style
 
-Use an academic review style:
+Use an academic synthesis style:
 
 - Precise.
 - Critical.
@@ -61,6 +61,15 @@ Recommended logic:
 3. Tabular descriptors suit intact heterogeneous polysaccharides.
 4. Graph/sequence representations suit defined glycans or oligosaccharides.
 5. Databases and controlled formats are prerequisites for transferable models.
+
+### Extraction, purification, and process optimization
+
+Recommended logic:
+
+1. Extraction and purification determine molecular weight distribution, branching, purity, and bioactivity-relevant fractions.
+2. Yield optimization alone is not enough for structure-function interpretation.
+3. Process variables become useful for AI only when linked to structural descriptors and functional endpoints.
+4. Validation should include independent batches or external samples when possible.
 
 ### AI-assisted MS/MS
 
@@ -90,6 +99,15 @@ Recommended logic:
 2. Beta-glucans, pectins, arabinoxylans, inulin/FOS, starch-derived oligosaccharides, mushroom polysaccharides, and algal polysaccharides require different descriptors.
 3. AI opportunities depend on available structural evidence and datasets.
 4. Structure-function claims require experimental validation.
+
+### Structure-function, microbiota, and immune activity
+
+Recommended logic:
+
+1. Polysaccharide structural descriptors need to be linked to biological endpoints with caution.
+2. Gut microbiota, SCFA, inflammatory factors, and intestinal barrier markers can serve as structured labels or mechanistic evidence.
+3. AI models can support hypothesis generation, but they do not prove causality.
+4. Experimental validation is required for any structure-function claim.
 
 ## A* Citation Handling
 

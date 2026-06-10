@@ -31,7 +31,7 @@ Use this structure for A-priority papers.
 2. Why this paper matters
    - Main research question
    - Main contribution
-   - Why it is relevant to the review
+   - Why it is relevant to the current research project or matrix goal
 
 3. Carbohydrate-related information
    - Carbohydrate type
@@ -65,10 +65,10 @@ Use this structure for A-priority papers.
 7. Limitations
    - Data limitations
    - Method limitations
-   - Applicability limitations to food carbohydrates
+   - Applicability limitations to food or bioactive polysaccharides
 
 8. How to use this paper
-   - Suitable review section
+   - Suitable research section
    - Suitable table or figure
    - Priority
    - Transferability caveat if needed
@@ -90,6 +90,25 @@ For AI/computational papers, extract:
 | `limitation` | Key limitation |
 | `transferability_to_food_carbohydrates` | high, medium, low with explanation |
 | `evidence_from_pdf` | Short evidence phrase; do not overquote |
+
+## Extraction, Purification, And Process Optimization Extraction
+
+For extraction, purification, fractionation, degradation, modification, or process optimization papers, extract:
+
+| Field |
+|---|
+| extraction_or_process_method |
+| raw_material |
+| polysaccharide_fraction |
+| optimization_variables |
+| yield_or_purity |
+| structural_evidence |
+| functional_endpoint |
+| ai_or_statistical_method |
+| process_structure_function_link |
+| key_limitation |
+
+Do not assign high priority to yield-only optimization unless the paper also provides structural evidence, functional evidence, or modelable process variables.
 
 ## Table 1 Extraction
 
@@ -130,4 +149,23 @@ For AI-assisted MS/NMR papers, extract:
 | key_limitation |
 | food_carbohydrate_relevance |
 
-If the paper is not an AI-assisted MS/NMR study, state why it should not be included in Table 3.
+If the paper is not an AI-assisted MS/NMR/spectroscopy study, state why it should not be included in Table 3.
+
+## Structure-Function Extraction
+
+For papers linking polysaccharides to gut microbiota, immune activity, SCFA, metabolites, inflammation, or intestinal barrier markers, extract:
+
+| Field |
+|---|
+| polysaccharide_source |
+| structural_descriptors |
+| biological_model |
+| microbiota_or_metabolite_endpoint |
+| immune_or_barrier_endpoint |
+| statistical_or_ai_method |
+| structure_function_claim |
+| evidence_strength |
+| causality_limitation |
+| validation_needed |
+
+Separate correlation from causality. Do not treat microbiota shifts or inflammatory marker changes as proof of mechanism unless the paper provides direct mechanistic validation.

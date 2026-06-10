@@ -12,6 +12,8 @@ Move beyond single-paper extraction. Help the user answer:
 - Which papers belong in the same table or paragraph?
 - Which limitations are shared across papers?
 - Which papers are transferable to food carbohydrates, and which require domain adaptation?
+- Which extraction/process variables are connected to structure or function?
+- Which structure-function claims are only correlative, and which have stronger mechanistic support?
 
 ## Required Inputs
 
@@ -89,6 +91,22 @@ When comparing representation/model papers, focus on:
 - Whether the model needs fully defined structures.
 - Whether heterogeneous polysaccharides can be represented.
 - Whether food carbohydrate datasets exist.
+
+When comparing extraction, purification, or process optimization papers, focus on:
+
+- Raw material and polysaccharide fraction.
+- Extraction or purification variables.
+- Whether the paper links process variables to molecular weight, monosaccharide composition, linkage, conformation, purity, or bioactivity.
+- Whether optimization is yield-only or structure/function-informed.
+- Whether the design supports model building beyond response surface fitting.
+
+When comparing structure-function, microbiota, or immune papers, focus on:
+
+- Structural descriptors used as explanatory variables.
+- Biological endpoints, including microbiota, SCFA/metabolites, cytokines, immune cells, inflammation, and barrier markers.
+- Whether the study separates correlation from causality.
+- Whether the model is interpretable and experimentally validated.
+- Whether confounders such as source, purity, dose, molecular weight distribution, and batch variation are controlled.
 
 ## Output Discipline
 

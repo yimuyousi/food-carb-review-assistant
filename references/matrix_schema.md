@@ -11,7 +11,7 @@ Use exactly these columns for `literature_matrix`.
 | `doi` | DOI | Use `not_reported` if absent |
 | `paper_type` | Type of paper | `review`, `original`, `method`, `database`, `tool` |
 | `publication_status` | Publication status | `peer_reviewed`, `preprint`, `database/tool_page`, `needs_manual_check` |
-| `review_section` | Best review section | Use controlled vocabulary |
+| `research_section` | Best research topic/section | Use controlled vocabulary |
 | `carbohydrate_type` | Main carbohydrate type | Examples: beta_glucan, pectin, glycan, oligosaccharide, general |
 | `food_relevance` | Food relevance level | `high`, `medium`, `low` |
 | `structure_problem` | Structural problem addressed | Be specific |
@@ -22,7 +22,7 @@ Use exactly these columns for `literature_matrix`.
 | `model_output` | Output of AI/model/workflow | Use `not_applicable` if no AI |
 | `main_contribution` | Main contribution | One concise phrase or sentence |
 | `limitation` | Key limitation | One concise phrase or sentence |
-| `relevance_to_review` | Why this paper matters | Connect to review title |
+| `relevance_to_project` | Why this paper matters | Connect to the current research project or matrix goal |
 | `transferability_caveat` | Caveat for non-food or low-relevance methods | Required for `A*` |
 | `use_position` | Where to use it | main_text, background, Table 1/2/3/4, Figure 1-6, discussion |
 | `priority` | A/B/C/D | Follow priority rules |
@@ -44,13 +44,15 @@ Use exactly these columns for `literature_matrix`.
 - `database/tool_page`
 - `needs_manual_check`
 
-`review_section`:
+`research_section`:
 - `structural_complexity`
 - `conventional_methods`
+- `extraction_purification_optimization`
 - `ai_ready_data_representation`
-- `ai_msms_structure_elucidation`
+- `ai_msms_structure_analysis`
 - `ai_nmr_spectroscopy`
 - `food_carbohydrate_applications`
+- `structure_function_microbiota_immunity`
 - `challenges_perspectives`
 
 `data_type`:
@@ -75,10 +77,10 @@ Use `A*` for high-method-value papers with low or indirect food relevance. Alway
 
 ## Table Mapping
 
-`Table 1`: Conventional methods for food carbohydrate structural elucidation and AI-usable outputs.
+`Table 1`: Conventional methods for polysaccharide structural characterization and AI-usable outputs.
 
-`Table 2`: Databases and tools for carbohydrate structure representation.
+`Table 2`: Databases, descriptors, and tools for carbohydrate structure representation.
 
-`Table 3`: AI-assisted MS/NMR carbohydrate structure elucidation studies.
+`Table 3`: AI-assisted MS/NMR/spectroscopy carbohydrate structure analysis studies.
 
-`Table 4`: Food carbohydrate types, structural challenges, and AI opportunities.
+`Table 4`: Polysaccharide types, structural/function challenges, and AI opportunities.

@@ -1,53 +1,67 @@
-# Food Carb Review Assistant
+# Polysaccharide Research Assistant
 
-OpenClaw skill for assisting the review:
+OpenClaw skill for general polysaccharide research workflows.
 
-**Artificial intelligence-assisted structural elucidation of food carbohydrates: advances, challenges, and future perspectives**
+It uses neutral project language such as "current research project", "research section", and "literature matrix", so it can be reused across different polysaccharide research topics.
 
-The skill helps parse user-provided PDFs into a literature matrix, classify papers into review sections, extract AI input-output relationships, assess preprints and transferability, synthesize multiple papers, draft section-level prose, prepare table/figure materials, and quality-check extraction results.
+## What It Does
+
+- Parse user-provided PDFs into a literature matrix.
+- Classify papers into general polysaccharide research sections.
+- Extract AI model inputs, outputs, datasets, contributions, and limitations.
+- Assess preprints, medical glycomics papers, and cross-domain transferability.
+- Compare multiple papers and synthesize method evolution.
+- Draft section-level academic prose from supplied matrix rows.
+- Prepare table and figure materials.
+- Quality-check extraction results and mark unsupported claims.
+
+## Research Coverage
+
+The skill is designed for work involving:
+
+- Food carbohydrates and bioactive polysaccharides.
+- Beta-glucans, pectins, arabinoxylans, inulin/FOS, resistant starch, mushroom polysaccharides, algal polysaccharides, and medicinal-food homologous polysaccharides.
+- Polysaccharide extraction, purification, structural characterization, and process optimization.
+- MS/MS, NMR, FT-IR, Raman, NIR, chromatography, methylation analysis, and multimodal spectroscopy.
+- Glycan databases, graph/sequence representations, and carbohydrate AI methods.
+- Gut microbiota, SCFA/metabolites, immune activity, intestinal barrier markers, and interpretable structure-function modeling.
 
 ## Install
 
 Copy this folder into one of OpenClaw's skill locations, for example:
 
 ```text
-<workspace>/.agents/skills/food-carb-review-assistant
+<workspace>/.agents/skills/polysaccharide-research-assistant
 ```
 
 or:
 
 ```text
-~/.openclaw/skills/food-carb-review-assistant
+~/.openclaw/skills/polysaccharide-research-assistant
 ```
+
+If the GitHub repository folder has an older name, you can still use the skill as long as `SKILL.md` is present. For public clarity, the recommended folder name is `polysaccharide-research-assistant`.
 
 ## Typical Use
 
-Ask OpenClaw:
-
 ```text
-Use the food-carb-review-assistant skill to parse this PDF into my literature matrix.
+Use the polysaccharide-research-assistant skill to parse this PDF into my literature matrix.
 ```
 
-or:
-
 ```text
-Use the food-carb-review-assistant skill to extract the AI input-output workflow from this PDF.
+Use the polysaccharide-research-assistant skill to extract the AI input-output workflow from this PDF.
 ```
 
-For multi-paper synthesis:
-
 ```text
-Use the food-carb-review-assistant skill to compare these matrix rows and synthesize the method evolution.
+Use the polysaccharide-research-assistant skill to compare these matrix rows and synthesize the method evolution.
 ```
 
-For section writing:
-
 ```text
-Use the food-carb-review-assistant skill to draft the AI-assisted MS/MS section from these A-priority matrix rows.
+Use the polysaccharide-research-assistant skill to draft a section from these A-priority matrix rows.
 ```
 
 ## Notes
 
-The skill is designed to avoid unsupported claims. Missing information should be marked as `not_reported`, and uncertain information should be marked as `needs_manual_check`.
+Missing information should be marked as `not_reported`. Unclear information should be marked as `needs_manual_check`.
 
-The skill supports `A*` priority for papers with high method value but low or indirect food relevance, such as preprints or medical glycomics papers that require domain adaptation before use in food carbohydrate research.
+Use `A*` priority for papers with high methodological value but indirect relevance, such as preprints, medical glycomics papers, or general glycan AI methods that require domain adaptation before use in food or bioactive polysaccharide research.

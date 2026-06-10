@@ -1,14 +1,14 @@
-# Review Scope
+# Research Scope
 
-## Review Title
+## General Research Area
 
-Artificial intelligence-assisted structural elucidation of food carbohydrates: advances, challenges, and future perspectives
+Food carbohydrates, bioactive polysaccharides, glycan AI methods, extraction and purification, spectroscopy-assisted carbohydrate structure analysis, process optimization, and polysaccharide structure-function relationships.
 
 ## Core Thesis
 
-Food carbohydrates, especially food polysaccharides, have complex and heterogeneous structures. AI can assist structural elucidation by improving data extraction, spectral interpretation, candidate structure prediction, structure representation, and integration of MS/MS, NMR, spectroscopy, databases, and structural descriptors.
+Food carbohydrates and bioactive polysaccharides have complex and heterogeneous structures. AI can assist research by improving data extraction, spectral interpretation, candidate structure prediction, structure representation, literature synthesis, process optimization, and integration of MS/MS, NMR, spectroscopy, databases, structural descriptors, gut microbiota, metabolites, and immune activity data.
 
-AI should be framed as an assistant to traditional structural elucidation, not a full replacement.
+AI should be framed as an assistant to traditional structural analysis and hypothesis generation, not a full replacement for expert structural elucidation or experimental validation.
 
 ## Include
 
@@ -25,6 +25,8 @@ AI should be framed as an assistant to traditional structural elucidation, not a
 - Medicinal and food homologous polysaccharides when food relevance is clear.
 - Glycan structure AI methods if transferable to food carbohydrate structure elucidation.
 - Non-food glycan AI methods with high methodological value, only with explicit transferability caveats.
+- Extraction, purification, fractionation, and process optimization papers when connected to structural evidence, activity evidence, or modelable variables.
+- Structure-function papers linking polysaccharide structure to gut microbiota, SCFA, immune factors, inflammation, or intestinal barrier markers.
 
 ## Exclude Or Downgrade
 
@@ -34,7 +36,7 @@ AI should be framed as an assistant to traditional structural elucidation, not a
 - Food function papers with weak or absent structural characterization.
 - Extraction optimization papers that do not address structure elucidation.
 
-## Review Section Meanings
+## Research Section Meanings
 
 `structural_complexity`:
 Use for papers explaining carbohydrate structural heterogeneity, molecular weight distribution, branching, linkage complexity, conformation, substituent groups, and limitations of defining intact polysaccharides as single structures.
@@ -42,10 +44,13 @@ Use for papers explaining carbohydrate structural heterogeneity, molecular weigh
 `conventional_methods`:
 Use for HPGPC/SEC-MALS, monosaccharide composition, methylation-GC-MS, FT-IR, Raman, NIR, NMR, LC-MS/MS, AFM, SEM, XRD, CD, Congo red, rheology, and other traditional characterization methods.
 
+`extraction_purification_optimization`:
+Use for extraction method comparison, purification/fractionation, degradation, modification, response surface methodology, process optimization, and process-structure-function links. Do not use this section for papers with only yield optimization and no structural, functional, or modeling relevance.
+
 `ai_ready_data_representation`:
 Use for databases, WURCS, GlycoCT, IUPAC-condensed, graph representation, glycowork, SweetNet, GlycanML, GlyTouCan, CSDB, CAZy, dbCAN, Food Glycopedia.
 
-`ai_msms_structure_elucidation`:
+`ai_msms_structure_analysis`:
 Use for AI or computational methods that interpret MS/MS spectra, predict glycan/oligosaccharide structures, rank candidates, annotate fragments, or infer composition/linkage from MS data.
 
 `ai_nmr_spectroscopy`:
@@ -53,6 +58,9 @@ Use for NMR chemical shift prediction, peak assignment, candidate structure rank
 
 `food_carbohydrate_applications`:
 Use for food carbohydrate case studies with meaningful structural characterization and potential AI relevance.
+
+`structure_function_microbiota_immunity`:
+Use for studies linking polysaccharide structural features to gut microbiota, SCFA, metabolites, inflammatory factors, immune activity, or intestinal barrier markers.
 
 `challenges_perspectives`:
 Use for papers discussing data standardization, lack of annotated datasets, raw spectral data availability, interpretability, multimodal learning, uncertainty, and experimental validation.

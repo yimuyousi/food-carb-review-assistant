@@ -14,7 +14,7 @@ Use this file when checking PDF extraction results.
    - Do not reconstruct DOI from memory.
 
 3. **Controlled vocabulary check**
-   - `paper_type`, `review_section`, `data_type`, and `priority` must use allowed values.
+   - `paper_type`, `research_section`, `data_type`, and `priority` must use allowed values.
 
 4. **Food relevance check**
    - Do not label medical glycomics/glycoproteomics as `high` food relevance.
@@ -33,7 +33,7 @@ Use this file when checking PDF extraction results.
    - Avoid vague limitations such as "more research is needed" unless the PDF only supports that.
 
 8. **Priority check**
-   - `A` requires clear relevance to the review's main thesis or a table/figure.
+   - `A` requires clear relevance to the current research project's main objective or a table/figure.
    - `A*` requires high method value plus an explicit transferability caveat.
    - Downgrade to `B` or `C` if relevance is indirect.
    - Use `D` when the paper is off-scope.
@@ -60,3 +60,5 @@ Use `ok`, `needs_manual_check`, or `revise`.
 - AI treats spectral fingerprint classification as full structural elucidation.
 - AI overstates transferability from defined glycans to heterogeneous food polysaccharides.
 - AI fails to distinguish intact polysaccharides from oligosaccharide fragments.
+- AI treats yield-only extraction optimization as high-priority structure-function evidence.
+- AI treats microbiota or immune correlations as causal mechanisms without validation.
